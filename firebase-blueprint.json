@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firestore-blueprint.json",
+  "entities": {
+    "User": {
+      "collection": "users",
+      "fields": {
+        "uid": { "type": "string", "description": "Firebase Auth User ID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "User display name" },
+        "photoURL": { "type": "string", "description": "User avatar URL" },
+        "phoneNumber": { "type": "string", "description": "Contact phone number" },
+        "createdAt": { "type": "timestamp", "description": "Account creation time" }
+      }
+    },
+    "Property": {
+      "collection": "properties",
+      "fields": {
+        "title": { "type": "string", "description": "Property title / name" },
+        "description": { "type": "string", "description": "Detailed description" },
+        "price": { "type": "number", "description": "Price in USD" },
+        "location": { "type": "string", "description": "City, State or address" },
+        "category": { "type": "string", "description": "Category: House, Apartment, or Plot" },
+        "imageUrl": { "type": "string", "description": "Primary property image URL" },
+        "gallery": { "type": "array", "description": "Additional gallery images" },
+        "bedrooms": { "type": "number", "description": "Number of bedrooms" },
+        "bathrooms": { "type": "number", "description": "Number of bathrooms" },
+        "areaSqft": { "type": "number", "description": "Area in square feet or sq meters" },
+        "features": { "type": "array", "description": "Key amenities/features" },
+        "sellerId": { "type": "string", "description": "Creator User ID" },
+        "sellerName": { "type": "string", "description": "Seller display name" },
+        "sellerEmail": { "type": "string", "description": "Seller email" },
+        "sellerPhone": { "type": "string", "description": "Seller contact phone" },
+        "createdAt": { "type": "timestamp", "description": "Creation timestamp" },
+        "updatedAt": { "type": "timestamp", "description": "Last updated timestamp" }
+      }
+    },
+    "Booking": {
+      "collection": "bookings",
+      "fields": {
+        "propertyId": { "type": "string", "description": "ID of the property" },
+        "propertyTitle": { "type": "string", "description": "Title of the property" },
+        "propertyLocation": { "type": "string", "description": "Property location" },
+        "propertyImageUrl": { "type": "string", "description": "Property image thumbnail" },
+        "userId": { "type": "string", "description": "Applicant User ID" },
+        "userName": { "type": "string", "description": "Applicant full name" },
+        "userEmail": { "type": "string", "description": "Applicant email" },
+        "userPhone": { "type": "string", "description": "Applicant phone" },
+        "sellerId": { "type": "string", "description": "Property owner User ID" },
+        "date": { "type": "string", "description": "Scheduled viewing date" },
+        "timeSlot": { "type": "string", "description": "Scheduled viewing time slot" },
+        "notes": { "type": "string", "description": "Optional notes or questions" },
+        "status": { "type": "string", "description": "Pending, Confirmed, Cancelled" },
+        "createdAt": { "type": "timestamp", "description": "Timestamp of booking" }
+      }
+    }
+  }
+}

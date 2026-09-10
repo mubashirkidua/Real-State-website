@@ -1,0 +1,6 @@
+{
+  "name": "The Ocean Real State",
+  "description": "Premier luxury and coastal real estate platform featuring bespoke architectural residences, houses, apartments, plots, and direct CEO consultation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

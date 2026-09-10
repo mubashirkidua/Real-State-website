@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+@keyframes clockOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clockCounterOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.clock-orbit-container {
+  --orbit-radius: 120px;
+}
+@media (min-width: 640px) {
+  .clock-orbit-container {
+    --orbit-radius: 170px;
+  }
+}
+@media (min-width: 768px) {
+  .clock-orbit-container {
+    --orbit-radius: 210px;
+  }
+}
+
+.animate-clock-orbit {
+  animation: clockOrbit var(--orbit-duration, 45s) linear infinite;
+}
+
+.animate-clock-counter {
+  animation: clockCounterOrbit var(--orbit-duration, 45s) linear infinite;
+}
+
